@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tu factura ha sido generada</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 16px;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 16px;
+            color: #333333;
+        }
+
+            .card-body p {
+                margin: 0 0 12px;
+            }
+
+            .card-body ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .card-body li {
+                margin-bottom: 8px;
+            }
+
+        .card-footer {
+            background-color: #f0f0f0;
+            padding: 12px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #666666;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            ¡Factura Generada!
+        </div>
+        <div class="card-body">
+            <p>Hola <span class="highlight">{NombreCliente}</span>,</p>
+            <p>Tu factura ha sido creada con éxito. A continuación los detalles:</p>
+            <ul>
+                <li><strong>ID de factura:</strong> <span class="highlight">{FacturaId}</span></li>
+                <li><strong>Fecha:</strong> <span class="highlight">{Fecha}</span></li>
+                <li><strong>Total:</strong> <span class="highlight">{Total}</span></li>
+            </ul>
+            <p>Si tienes alguna duda, contáctanos respondiendo este correo.</p>
+        </div>
+        <div class="card-footer">
+            Gracias por tu preferencia.<br />
+            <small>Equipo de facturación</small>
+        </div>
+    </div>
+</body>
+</html>
